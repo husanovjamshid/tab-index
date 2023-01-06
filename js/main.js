@@ -9,12 +9,21 @@ elForm.addEventListener('submit', evt => {
 
   if(elInput.value == 1) {
     elResult.textContent = 'POSITIVE Content'
+    document.querySelector('.wrap-btn1').classList.add('font')
+    document.querySelector('.wrap-btn2').classList.remove('font')
+    document.querySelector('.wrap-btn3').classList.remove('font')
   }
   else if(elInput.value == 2) {
     elResult.textContent = 'NEGATIVE Content'
+    document.querySelector('.wrap-btn1').classList.remove('font')
+    document.querySelector('.wrap-btn2').classList.add('font')
+    document.querySelector('.wrap-btn3').classList.remove('font')
   }
   else if(elInput.value == 3) {
     elResult.textContent = 'NEUTRAL Content'
+    document.querySelector('.wrap-btn1').classList.remove('font')
+    document.querySelector('.wrap-btn2').classList.remove('font')
+    document.querySelector('.wrap-btn3').classList.add('font')
   }
   else {
     alert('Incorrect index was written')
