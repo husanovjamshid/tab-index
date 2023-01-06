@@ -26,12 +26,20 @@ elForm.addEventListener('submit', evt => {
 elWrap.addEventListener('click', evt => {
   if(evt.target.matches('.wrap-btn1')) {
     elResult.textContent = 'POSITIVE Content'
-    evt.target.matches('.wrap-btn1')
+    document.querySelector('.wrap-btn1').classList.add('font')
+    document.querySelector('.wrap-btn2').classList.remove('font')
+    document.querySelector('.wrap-btn3').classList.remove('font')
   }
   if(evt.target.matches('.wrap-btn2')) {
     elResult.textContent = 'NEGATIVE Content'
+    document.querySelector('.wrap-btn1').classList.remove('font')
+    document.querySelector('.wrap-btn2').classList.add('font')
+    document.querySelector('.wrap-btn3').classList.remove('font')
   }
   if(evt.target.matches('.wrap-btn3')) {
     elResult.textContent = 'NEUTRAL Content'
+    document.querySelector('.wrap-btn1').classList.remove('font')
+    document.querySelector('.wrap-btn2').classList.remove('font')
+    document.querySelector('.wrap-btn3').classList.add('font')
   }
 })

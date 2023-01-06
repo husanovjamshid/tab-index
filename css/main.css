@@ -9,3 +9,7 @@
 p {
   cursor: pointer;
 }
+
+.font {
+    font-weight: bold;
+}
